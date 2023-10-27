@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9CB5FF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitleHerzingCollege"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Herzing College"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07" />
+
+    <Button
+        android:id="@+id/btnTipCalculator"
+        android:layout_width="191dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#000000"
+        android:text="Tip Calculator"
+        app:layout_constraintStart_toEndOf="@+id/btnColorSwitcher"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleHerzingCollege" />
+
+    <Button
+        android:id="@+id/btnColorSwitcher"
+        android:layout_width="187dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#000000"
+        android:text="Color Switcher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleHerzingCollege" />
+
+    <Button
+        android:id="@+id/btnAboutMe"
+        android:layout_width="184dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#000000"
+        android:text="About Me"
+        app:layout_constraintEnd_toStartOf="@+id/btnColorSwitcher"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleHerzingCollege" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="356dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:text="Louis-Olivier Major"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleHerzingCollege" />
+
+    <TextView
+        android:id="@+id/tvCurrentDateTime"
+        android:layout_width="205dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="4dp"
+        android:text="Test"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

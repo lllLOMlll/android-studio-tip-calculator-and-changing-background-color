@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayoutTipCalculator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9CB5FF"
+    tools:context=".TipCalculatorActivity">
+
+    <Button
+        android:id="@+id/btnBackTipCalculator"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="32dp"
+        android:backgroundTint="#000000"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCalculate"
+        app:layout_constraintStart_toEndOf="@+id/btnCalculate"
+        app:layout_constraintTop_toTopOf="@+id/btnCalculate" />
+
+    <TextView
+        android:id="@+id/tvGSTCalculated"
+        android:layout_width="120dp"
+        android:layout_height="28dp"
+        android:hint="GST will be automatically calculated"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/tvGST"
+        app:layout_constraintStart_toStartOf="@+id/etBillBeforeTaxes"
+        app:layout_constraintTop_toTopOf="@+id/tvGST" />
+
+    <TextView
+        android:id="@+id/tvTipCalculatorTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Tip Calculator"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07" />
+
+    <TextView
+        android:id="@+id/tvBillBeforeTaxes"
+        android:layout_width="175dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Bill (before taxes):"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTipCalculatorTitle" />
+
+    <EditText
+        android:id="@+id/etBillBeforeTaxes"
+        android:layout_width="120dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#000000"
+        android:ems="8"
+        android:hint="0.00$"
+        android:inputType="numberDecimal"
+        android:digits="0123456789,.$"
+        android:maxLength="8"
+        app:layout_constraintBottom_toBottomOf="@+id/tvBillBeforeTaxes"
+        app:layout_constraintStart_toEndOf="@+id/tvBillBeforeTaxes"
+        app:layout_constraintTop_toTopOf="@+id/tvBillBeforeTaxes" />
+
+    <TextView
+        android:id="@+id/tvGST"
+        android:layout_width="88dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="32dp"
+        android:text="GST:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvBillBeforeTaxes"
+        app:layout_constraintTop_toBottomOf="@+id/tvBillBeforeTaxes" />
+
+    <TextView
+        android:id="@+id/tvHST"
+        android:layout_width="83dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="32dp"
+        android:text="HST:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvGST"
+        app:layout_constraintTop_toBottomOf="@+id/tvGST" />
+
+    <TextView
+        android:id="@+id/tvTipPercentage"
+        android:layout_width="171dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="32dp"
+        android:text="Tip Percentage %:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvHST"
+        app:layout_constraintTop_toBottomOf="@+id/tvHST" />
+
+    <TextView
+        android:id="@+id/tvNumberOfPeople"
+        android:layout_width="155dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Number of People:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="16sp"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/tvTipPercentage"
+        app:layout_constraintTop_toBottomOf="@+id/tvTipPercentage" />
+
+    <TextView
+        android:id="@+id/tvHSTCalculated"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:hint="HST will be automatically calculated"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/tvHST"
+        app:layout_constraintStart_toStartOf="@+id/tvGSTCalculated"
+        app:layout_constraintTop_toTopOf="@+id/tvHST" />
+
+    <EditText
+        android:id="@+id/etTipPercentage"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="15%"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTipPercentage"
+        app:layout_constraintStart_toStartOf="@+id/tvHSTCalculated"
+        app:layout_constraintTop_toTopOf="@+id/tvTipPercentage" />
+
+    <EditText
+        android:id="@+id/etNumberOfPeople"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="1"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/tvNumberOfPeople"
+        app:layout_constraintStart_toStartOf="@+id/etTipPercentage"
+        app:layout_constraintTop_toTopOf="@+id/tvNumberOfPeople" />
+
+    <CheckBox
+        android:id="@+id/checkBoxIncludesTaxInTip"
+        android:layout_width="184dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="36dp"
+        android:text="Includes tax in tip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumberOfPeople" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#000000"
+        android:text="Calculate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxIncludesTaxInTip" />
+
+    <TextView
+        android:id="@+id/tvTotalTip"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:text="Total Tip:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="@+id/etBillBeforeTaxes"
+        app:layout_constraintStart_toEndOf="@+id/etBillBeforeTaxes"
+        app:layout_constraintTop_toTopOf="@+id/etBillBeforeTaxes" />
+
+    <TextView
+        android:id="@+id/tvTipPerPerson"
+        android:layout_width="155dp"
+        android:layout_height="49dp"
+        android:text="Tip:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="@+id/tvHSTCalculated"
+        app:layout_constraintEnd_toEndOf="@+id/tvTotalTip"
+        app:layout_constraintTop_toTopOf="@+id/tvHSTCalculated"
+        app:layout_constraintVertical_bias="0.583" />
+
+    <TextView
+        android:id="@+id/tvTotalTipCalculated"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="0.00$"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTotalTip"
+        app:layout_constraintStart_toEndOf="@+id/tvTotalTip"
+        app:layout_constraintStart_toStartOf="@+id/tvTotalTipPerPersonCalculated"
+        app:layout_constraintTop_toTopOf="@+id/tvTotalTip"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tvTotalTipPerPersonCalculated"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:text="0.00$ / per"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTipPerPerson"
+        app:layout_constraintStart_toEndOf="@+id/tvTipPerPerson"
+        app:layout_constraintTop_toTopOf="@+id/tvTipPerPerson" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
